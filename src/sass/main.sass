@@ -1,0 +1,47 @@
+@import "animation.sass"
+    
+$side-lenght: 300px
+
+.flatness
+    border: 5px dashed green
+    width: $side-lenght
+    height: $side-lenght
+    position: absolute
+
+*
+    box-sizing: border-box
+
+body
+    background-color: black
+
+.container
+    display: block
+    position: relative
+    margin: 200px auto
+    width: $side-lenght
+    height: $side-lenght
+    perspective: 600px
+
+.cube
+    width: $side-lenght
+    height: $side-lenght
+    transform-style: preserve-3d
+    animation: rotate 3s linear infinite
+
+.top-flatness
+    transform: rotateX(90deg) translateZ(150px)
+    
+.bottom-flatness
+    transform: rotateX(-90deg) translateZ(150px)
+
+.right-flatness
+    transform: rotateY(90deg) translateZ(150px)
+
+.front-flatness
+    transform: translateZ(150px)
+
+.left-flatness
+    transform: rotateY(-90deg) translateZ(150px)
+
+.back-flatness
+    transform: rotateY(180deg) translateZ(150px)
